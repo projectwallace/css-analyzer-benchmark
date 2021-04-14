@@ -1,10 +1,9 @@
 import benchmark from 'benchmark'
 import analyzeCss from '@projectwallace/css-analyzer'
 import cssstats from 'cssstats'
+import { readFileSync } from 'fs'
 
-const css = `html {
-  font-size: 1em;
-}`
+const css = readFileSync('./mock-github.css', 'utf-8')
 
 const suite = new benchmark.Suite()
 
