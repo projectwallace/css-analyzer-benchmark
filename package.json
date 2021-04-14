@@ -1,0 +1,18 @@
+{
+  "name": "benchmark-css-analyzer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Bart Veneman <bart@projectwallace.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@projectwallace/css-analyzer": "^4.0.3",
+    "benchmark": "^2.1.4",
+    "cssstats": "^4.0.2"
+  }
+}
