@@ -13,6 +13,7 @@
   "dependencies": {
     "@projectwallace/css-analyzer": "^4.0.3",
     "benchmark": "^2.1.4",
-    "cssstats": "^4.0.2"
+    "cssstats": "^4.0.2",
+    "stylestats": "^7.0.2"
   }
 }
