@@ -1,7 +1,5 @@
 # CSS Analyzer benchmark
 
-## One line of CSS
-
 ```
 @projectwallace/css-analyzer - small css:    760 ops/sec
                     cssstats - small css:  11778 ops/sec
