@@ -3,6 +3,10 @@ import analyzeCss from '@projectwallace/css-analyzer'
 import cssstats from 'cssstats'
 import StyleStats from 'stylestats'
 import { readFileSync } from 'fs'
+import Parker from 'parker/lib/Parker.js'
+import parkerMertrics from 'parker/metrics/All.js'
+
+const parker = new Parker(parkerMertrics)
 
 const smallCss = 'html { font-size: 1em; color: red; background: #000, hsla(0, 20% 30% / .5); border: 3px solid gray }'
 const bigCss = readFileSync('./mock-github.css', 'utf-8')
@@ -29,6 +33,9 @@ suite
       })
     }
   })
+  .add('Parker - small css', () => {
+    parker.run(smallCss)
+  })
   .add('@projectwallace/css-analyzer - big css', {
     defer: true,
     fn(defer) {
@@ -47,6 +54,9 @@ suite
         defer.resolve()
       })
     }
+  })
+  .add('Parker - big css', () => {
+    parker.run(bigCss)
   })
   .on('cycle', event => {
     const name = event.target.name.padStart('@projectwallace/css-analyzer - small css'.length, ' ')
